@@ -1,3 +1,3 @@
-# ![Thunderstorm icon](rep-resources/images/thunderstorm.png) Thunderstorm
+# ![Thunderstorm icon](rep-resources/images/thunderstorm.png) ThunderStorm
 
-Tips, Tricks &amp; Examples for Thunderbird E-mail New Add-On Development
+## Tips, Tricks &amp; Examples for Thunderbird E-mail New Add-On Development
