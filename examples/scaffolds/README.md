@@ -18,9 +18,9 @@ appropriate, README files are included for more information.
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
 
 [ex1]:/examples/scaffolds/tb-legacy-xul-ext-basic1/README.md
-[ex2]:/examples/scaffolds/tb-mail-ext-bare1
-[ex3]:/examples/scaffolds/tb-mail-ext-basic1
-[ex4]:/examples/scaffolds/tb-mail-ext-advanced1
+[ex2]:/examples/scaffolds/tb-mail-ext-bare1/README.md
+[ex3]:/examples/scaffolds/tb-mail-ext-basic1/README.md
+[ex4]:/examples/scaffolds/tb-mail-ext-advanced1/README.md
 
 
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
