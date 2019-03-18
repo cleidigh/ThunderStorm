@@ -4,6 +4,7 @@
 
 <div>
 	<pre>
+	```Python
 	legacy-xul-ext-basic1/
 	├── install.rdf
 	├── chrome.manifest
@@ -19,6 +20,7 @@
 	└── defaults/
 	    └── preferences/
 	        └── legacy-xul-ext-basic1.js
+	```
 	</pre>
 	
 </div>
