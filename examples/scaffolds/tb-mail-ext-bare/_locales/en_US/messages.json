@@ -1,0 +1,11 @@
+//  messages.json - en-US locale
+{
+	"extensionTitle": {
+		"message": "Bare MailExtension",
+		"description": "Title of the extension."
+	},
+	"optionsPageTitle": {
+		"message": "Bare MailExtension Options",
+		"description": "Title of the options page."
+	}
+}

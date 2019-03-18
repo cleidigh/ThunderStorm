@@ -1,1 +1,18 @@
-# manifest.json
+{
+	"manifest_version": 2,
+	"name": "Thunderbird MalExtension Bare-Scaffold",
+	"version": "0.0.1",
+	"description": "Bare-Metal scaffold example of a Legacy XUL Extension",
+	"author": "tb-dev",
+	"applications": {
+		"gecko": {
+			"id": "tb-mail-ext-bare@tb.dev"
+		}
+	},
+	"options_ui": {
+		"page": "options.html"
+	  },
+	"icons": {
+		"64": "images/mail-ext-icon-64px.png"
+	}
+}
