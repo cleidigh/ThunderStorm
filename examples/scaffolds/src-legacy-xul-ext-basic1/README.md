@@ -2,7 +2,8 @@
 
 ## Legacy-XUL Extension File And Folder Structure
 
-```Python
+
+```js
 	legacy-xul-ext-basic1/
 	├── install.rdf
 	├── chrome.manifest

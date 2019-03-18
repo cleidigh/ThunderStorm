@@ -1,4 +1,4 @@
-# ![Thunderstorm icon](rep-resources/images/thunderstorm.png) Scaffolding
+# ![Thunderstorm icon](/rep-resources/images/thunderstorm.png) Scaffolding
 
 ## Example MailExtension File And Folder Structures
 
@@ -8,10 +8,10 @@ appropriate, README files are included for more information.
 
 ## Scaffolding Examples
 
-src-tb-legacy-XUL-ext-basic1
-src-tb-mail-ext-bare1
-src-tb-mail-ext-basic1
-src-tb-mail-ext-advanced1
+-- tb-legacy-XUL-ext-basic1  
+-- tb-mail-ext-bare1
+-- tb-mail-ext-basic1
+-- tb-mail-ext-advanced1
 
 ## Credits	
 
