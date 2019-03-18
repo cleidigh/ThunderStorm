@@ -1,6 +1,6 @@
-# ![Thunderstorm icon](./rep-resources/images/thunderstorm.png) Bare Bones MailExtension Scaffold
+# ![Thunderstorm icon] Bare Bones MailExtension
 
-## Bare Bones MailExtensionFile And Folder Structure
+## Bare Bones MailExtension File And Folder Structure
 
 The structure below represents pretty much the bare minimum setup
 for a new mail extension.
@@ -27,3 +27,5 @@ for a new mail extension.
 ## Credits
 
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
+
+[Thunderstorm icon]:/rep-resources/images/thunderstorm.png

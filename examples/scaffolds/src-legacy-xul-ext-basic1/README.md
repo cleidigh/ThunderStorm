@@ -1,4 +1,4 @@
-# ![Thunderstorm icon](./rep-resources/images/thunderstorm.png) Basic Legacy-XUL Scaffold
+# ![Thunderstorm icon] Basic Legacy-XUL Scaffold
 
 ## Legacy-XUL Extension File And Folder Structure
 
@@ -26,3 +26,5 @@
 ## Credits
 
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
+
+[Thunderstorm icon]:/rep-resources/images/thunderstorm.png
