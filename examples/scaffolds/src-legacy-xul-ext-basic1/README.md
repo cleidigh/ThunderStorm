@@ -2,8 +2,6 @@
 
 ## Legacy-XUL Extension File And Folder Structure
 
-<div>
-	<pre>
 	```Python
 	legacy-xul-ext-basic1/
 	├── install.rdf
@@ -21,9 +19,7 @@
 	    └── preferences/
 	        └── legacy-xul-ext-basic1.js
 	```
-	</pre>
 	
-</div>
 
 
 ## Credits
