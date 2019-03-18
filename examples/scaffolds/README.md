@@ -21,5 +21,5 @@ appropriate, README files are included for more information.
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
 
 [ex1]:/examples/scaffolds/tb-legacy-xul-ext-basic1/README.md
-[ex2]:https://github.com/cleidigh/Thunderstorm/blob/examples/scaffolds/tb-legacy-XUL-ext-basic1/README.md
+[ex2]:/examples/scaffolds/tb-legacy-xul-ext-basic1
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
