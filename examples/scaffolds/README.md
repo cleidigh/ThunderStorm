@@ -13,6 +13,7 @@ appropriate, README files are included for more information.
 - [tb-mail-ext-basic1](/examples/scaffolds/tb-mail-ext-basic1 "tb-mail-ext-basic1")  MailExtension simple structure
 - [tb-mail-ext-advanced1](/examples/scaffolds/tb-mail-ext-advanced1 "tb-mail-ext-advanced1")  
 
+
 ## Credits	
 
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
