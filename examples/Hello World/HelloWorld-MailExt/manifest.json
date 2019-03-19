@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+	"version": "0.0.1",
+	"author": "tb-dev",
+	"applications": {
+		"gecko": {
+			"id": "tb-mail-ext-bare@tb.dev",
+			"strict_min_version": "60.0"
+		}
+	},
+	"background": {
+		"scripts": [ "scripts/options.js"]
+	},
+	
+	"browser_action": {
+		"default_popup": "options.html",
+		"default_title": "__MSG_extensionShortName__",
+		"default_icon": "images/internet-32px.png"
+	},
+	"permissions": [
+		"mailTabs",
+		"menus"
+	],
+	"icons": {
+		"64": "images/internet.png",
+		"32": "images/internet-32px.png",
+		"16": "images/internet-16px.png"
+	},
+	"default_locale": "en_US"
+}

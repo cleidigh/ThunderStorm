@@ -6,13 +6,16 @@
 	"author": "tb-dev",
 	"applications": {
 		"gecko": {
-			"id": "tb-mail-ext-bare@tb.dev"
+			"id": "tb-mail-ext-bare@tb.dev",
+			"strict_min_version": "60.0"
 		}
 	},
-	"options_ui": {
-		"page": "options.html"
-	  },
+	// "options_ui": {
+	"browser_actions": {
+		"default_popup": "options.html"
+	  },	
 	"icons": {
 		"64": "images/mail-ext-icon-64px.png"
 	}
+
 }
