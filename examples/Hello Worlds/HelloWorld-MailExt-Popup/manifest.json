@@ -6,22 +6,16 @@
 	"author": "tb-dev",
 	"applications": {
 		"gecko": {
-			"id": "tb-mail-ext-bare@tb.dev",
+			"id": "tb-helloworld-popup@tb.dev",
 			"strict_min_version": "60.0"
 		}
 	},
-	"background": {
-		"scripts": [ "scripts/options.js"]
-	},
-	
 	"browser_action": {
-		"default_popup": "options.html",
+		"default_popup": "popup.html",
 		"default_title": "__MSG_extensionShortName__",
 		"default_icon": "images/internet-32px.png"
 	},
 	"permissions": [
-		"mailTabs",
-		"menus"
 	],
 	"icons": {
 		"64": "images/internet.png",

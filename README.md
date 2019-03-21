@@ -21,10 +21,11 @@ pointers to other tutorials or related documentation is also included.
 
 -Development Environment & Tools: Help getting started
 - Examples:
-- [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
-- Basic component/feature example comparisons
-- Advanced Component and API comparisons
-- Tag by tag XUL => HTML conversion
+  - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
+  - [Hello Worlds - Several basic starting points][HelloWorlds]
+  - [Basic component & contribution point example comparisons - small, specific granular issues][ContributionPoints]
+  - [Advanced Component and API comparisons - Advanced topic issues][AdvancedExamples]
+  - [Tag by tag XUL => HTML conversion]
 - Wiki:
 - Gists:
 
@@ -36,3 +37,5 @@ pointers to other tutorials or related documentation is also included.
 <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 [Scaffolding]:/examples/scaffolds/README.md
+[HelloWorlds]:/examples/HelloWorlds/README.md
+[ContributionPoints]:/examples/contribution-points/README.md
