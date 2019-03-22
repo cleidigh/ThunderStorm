@@ -19,7 +19,7 @@ pointers to other tutorials or related documentation is also included.
 
 ## Organization
 
--Development Environment & Tools: Help getting started
+- Development Environment & Tools: Help getting started
 - Examples:
   - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
   - [Hello Worlds - Several basic starting points][HelloWorlds]
@@ -39,3 +39,4 @@ pointers to other tutorials or related documentation is also included.
 [Scaffolding]:/examples/scaffolds/README.md
 [HelloWorlds]:/examples/HelloWorlds/README.md
 [ContributionPoints]:/examples/contribution-points/README.md
+[AdvancedExamples]:/examples/contribution-points/README.md
