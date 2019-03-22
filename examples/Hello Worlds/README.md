@@ -5,7 +5,7 @@
 - [HelloWorld-MailExt-Background  -  Single background.js][HelloWorld-Background]
 - [HelloWorld-MailExt-Options  -  Single options_ui page/js][HelloWorld-Options]
 - [HelloWorld-MailExt-Menu  -  Tool Menu Contribution page/js][HelloWorld-ToolMenu]
-- [HelloWorld-MailExt-Maritage  -  Interactive combination][HelloWorld-Maritage]
+- [HelloWorld-MailExt-Meritage  -  Interactive combination][HelloWorld-Meritage]
   
 ## Notes:
 
