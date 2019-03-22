@@ -38,5 +38,5 @@ pointers to other tutorials or related documentation is also included.
 
 [Scaffolding]:/examples/scaffolds/README.md
 [HelloWorlds]:/examples/HelloWorlds/README.md
-[ContributionPoints]:/examples/contribution-points/README.md
+[ContributionPoints]:/examples/ContributionPoints/README.md
 [AdvancedExamples]:/examples/contribution-points/README.md
