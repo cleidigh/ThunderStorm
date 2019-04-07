@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!-- New CSS for TB 60.* -->
+<?xml-stylesheet href="chrome://messenger/skin/preferences/preferences.css" type="text/css"?>
+<?xml-stylesheet type="text/css" href="options.css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://preferences1/locale/prefwindow.dtd">
+
+<!-- <dialog class="options-dialog" -->
+    <dialog 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  id="preferences1dialog"
+  title="&prefwindow.title;"
+  type="child" >
+
+  
+      <prefpane id="pane1" label="&pane1.title;"  >
+    <!-- <prefpanel> -->
+	<!-- <groupbox> -->
+    <html:fieldset>
+    <html:legend>Animation</html:legend>
+	  <checkbox label="Animation Enable" preference="extensions.preferences1.animationenabled" />
+    <label control="duration">Duration:</label><textbox id="duration" preference="extensions.preferences1.animationduration"/>
+  <!-- </groupbox> -->
+</html:fieldset>
+	<!-- <groupbox> -->
+      <html:fieldset>
+          <html:legend>Colors</html:legend>
+  <label accesskey="&color.accesskey;" control="color">Background Color:</label><textbox id="color" preference="extensions.preferences1.optionscolor"/>
+  
+	<!-- </groupbox> -->
+  </html:fieldset>
+<!-- </prefpanel> -->
+</prefpane>
+
+<script type="application/javascript" src="chrome://global/content/preferencesBindings.js"/> 
+<script type="application/javascript" src="options.js"/>
+
+</dialog>

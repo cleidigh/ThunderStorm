@@ -1,0 +1,4 @@
+<!ENTITY prefwindow.title "Thunderbird 68 Preferences System Example 1">
+<!ENTITY pane1.title "Options preferences">
+<!ENTITY color.label "Color:">
+<!ENTITY color.accesskey "C">

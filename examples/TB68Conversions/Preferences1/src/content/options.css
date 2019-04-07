@@ -1,0 +1,12 @@
+/* 
+.options-dialog {
+	animation-name: dialog-animation;
+	animation-duration: 0s;
+}
+
+@keyframes dialog-animation {
+  from {background-color: white;}
+  to {background-color: yellow;}
+}
+
+ */

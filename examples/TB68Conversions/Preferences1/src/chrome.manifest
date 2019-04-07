@@ -1,0 +1,5 @@
+content	preferences1	content/
+locale	preferences1	en-US	locale/en-US/
+skin	preferences1	default		chrome/skin/
+skin	preferences1	classic/1.0	skin/
+

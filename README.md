@@ -23,6 +23,7 @@ pointers to other tutorials or related documentation is also included.
 - Examples:
   - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
   - [Hello Worlds - Several basic starting points][HelloWorlds]
+  - [TB68 Conversion Examples][TB68Conversion]
   - [Basic component & contribution point example comparisons - small, specific granular issues][ContributionPoints]
   - [Advanced Component and API comparisons - Advanced topic issues][AdvancedExamples]
   - [Tag by tag XUL => HTML conversion]
@@ -38,5 +39,6 @@ pointers to other tutorials or related documentation is also included.
 
 [Scaffolding]:/examples/scaffolds/README.md
 [HelloWorlds]:/examples/HelloWorlds/README.md
+[TB68Conversion]:/examples/tb68conversions/README.md
 [ContributionPoints]:/examples/ContributionPoints/README.md
 [AdvancedExamples]:/examples/contribution-points/README.md

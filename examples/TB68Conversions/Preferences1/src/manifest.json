@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "Preferences 1",
+	"description": "Demonstrates new Thunderbird v68 Preferences System Changes",
+	"version": "1.0.0",
+	"author": "tb-ao-dev",
+	"developer": {
+		"name": "Christopher Leidigh, Storm"
+	},
+	"applications": {
+		"gecko": {
+			"id": "preferences1@tb-ao-dev.net",
+			"strict_min_version": "60.0"
+		}
+	},
+	"icons": {
+		"64": "skin/preferences1-64px.png"
+	},
+	"legacy": {
+		"options": {
+			"page": "chrome://preferences1/content/options.xul",
+			"open_in_tab": false
+		}
+	}
+
+}
