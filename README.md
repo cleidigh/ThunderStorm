@@ -39,6 +39,6 @@ pointers to other tutorials or related documentation is also included.
 
 [Scaffolding]:/examples/scaffolds/README.md
 [HelloWorlds]:/examples/HelloWorlds/README.md
-[TB68Conversion]:/examples/TB68conversions/README.md
+[TB68Conversion]:/examples/TB68Conversions/README.md
 [ContributionPoints]:/examples/ContributionPoints/README.md
 [AdvancedExamples]:/examples/contribution-points/README.md
