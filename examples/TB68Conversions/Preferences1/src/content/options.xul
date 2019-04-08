@@ -4,39 +4,41 @@
 
 <!-- New CSS for TB 60.* -->
 <?xml-stylesheet href="chrome://messenger/skin/preferences/preferences.css" type="text/css"?>
+
+<!-- Load dialog CSS - just because we can -->
 <?xml-stylesheet type="text/css" href="options.css"?>
 
+<!-- DOCTYPE changes to: dialog SYSTEM -->
 <!DOCTYPE dialog SYSTEM "chrome://preferences1/locale/prefwindow.dtd">
 
-<!-- <dialog class="options-dialog" -->
-    <dialog 
-  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-  xmlns:html="http://www.w3.org/1999/xhtml"
-  id="preferences1dialog"
-  title="&prefwindow.title;"
-  type="child" >
+<!-- <prefwindow> needs to be replaced by a dialog window, <dialog>. -->
+<!-- The dialog window element already exists, but some behaviors and attributes have changed -->
 
-  
-      <prefpane id="pane1" label="&pane1.title;"  >
-    <!-- <prefpanel> -->
-	<!-- <groupbox> -->
+<!-- - The on [event] functions and attributes are now handled with standard Windows listeners -->
+<!-- - Use the following listener paradigms, typically set up in the corresponding JavaScript file -->
+
+
+<dialog class="options-dialog" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml" id="preferences1dialog" title="&prefwindow.title;" type="child">
+
+
+  <prefpane id="pane1" label="&pane1.title;">
     <html:fieldset>
-    <html:legend>Animation</html:legend>
-	  <checkbox label="Animation Enable" preference="extensions.preferences1.animationenabled" />
-    <label control="duration">Duration:</label><textbox id="duration" preference="extensions.preferences1.animationduration"/>
-  <!-- </groupbox> -->
-</html:fieldset>
-	<!-- <groupbox> -->
-      <html:fieldset>
-          <html:legend>Colors</html:legend>
-  <label accesskey="&color.accesskey;" control="color">Background Color:</label><textbox id="color" preference="extensions.preferences1.optionscolor"/>
-  
-	<!-- </groupbox> -->
-  </html:fieldset>
-<!-- </prefpanel> -->
-</prefpane>
+      <html:legend>Animation</html:legend>
+      <checkbox label="Animation Enable" preference="extensions.preferences1.animationenabled" />
+      <label control="duration">Duration:</label>
+      <textbox id="duration" preference="extensions.preferences1.animationduration" />
+    </html:fieldset>
+    <html:fieldset>
+      <html:legend>Colors</html:legend>
+      <label accesskey="&color.accesskey;" control="color">Background Color:</label>
+      <textbox id="color" preference="extensions.preferences1.optionscolor" />
+    </html:fieldset>
+  </prefpane>
 
-<script type="application/javascript" src="chrome://global/content/preferencesBindings.js"/> 
-<script type="application/javascript" src="options.js"/>
+  <!-- The overlay loader utilizing the preferences helper script seems to want to be at the bottom -->
+  <!-- of the dialog page.  preferencesBindings first. -->
+  <script type="application/javascript" src="chrome://global/content/preferencesBindings.js" />
+  <script type="application/javascript" src="options.js"/>
 
 </dialog>
