@@ -1,9 +1,9 @@
 /* global strftime, Preferences */
 var { Services } = ChromeUtils.import('resource://gre/modules/Services.jsm');
 
-
+// TODO: really describe what's happening here
 Services.console.logStringMessage("option loading");
-console.log("options load");
+
 Preferences.addAll([
 	{ id: "extensions.preferences1.titlestring", type: "unichar" },
 	{ id: "extensions.preferences1.optionscolor", type: "unichar" },
