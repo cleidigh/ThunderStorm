@@ -10,7 +10,7 @@ added to the list, post an issue and I will try to take a look.
 
 - Preferences System
   - Wiki Notes
-  - Preferences1 : Basic example showing backend/UI modifications
+  - [Preferences1 : Basic example showing backend/UI modifications][Preferences1]
 - Localization System
   - Wiki Notes
   - Localization1-Exp : i18n System example
@@ -20,4 +20,6 @@ added to the list, post an issue and I will try to take a look.
 
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
 
+
+[Preferences1]:/examples/TB68conversions/Preferences1/README.md
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
