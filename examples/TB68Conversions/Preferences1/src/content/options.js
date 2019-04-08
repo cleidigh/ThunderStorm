@@ -38,7 +38,7 @@ function onDialogAccept(e) {
 
 		// Note !!:  If we do not want to close AND also prevent application of the values (disk save)
 		// we have to preventDefault.
-
+		e.stopPropagation();
 		e.preventDefault();
 		return true;
 	}
