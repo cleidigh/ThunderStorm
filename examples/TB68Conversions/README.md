@@ -21,5 +21,5 @@ added to the list, post an issue and I will try to take a look.
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
 
 
-[Preferences1]:/examples/TB68conversions/Preferences1/README.md
+[Preferences1]:/examples/TB68Conversions/Preferences1/README.md
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
