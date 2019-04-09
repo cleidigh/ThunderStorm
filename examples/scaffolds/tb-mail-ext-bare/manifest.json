@@ -1,8 +1,10 @@
+// manifest.json - Allows JavaScript style comments (jsonc)
+
 {
 	"manifest_version": 2,
-	"name": "Thunderbird MalExtension Bare-Scaffold",
+	"name": "Thunderbird MailExtension Bare-Scaffold",
 	"version": "0.0.1",
-	"description": "Bare-Metal scaffold example of a Legacy XUL Extension",
+	"description": "Bare-Metal scaffold example of a MailExtension",
 	"author": "tb-dev",
 	"applications": {
 		"gecko": {
@@ -10,7 +12,6 @@
 			"strict_min_version": "60.0"
 		}
 	},
-	// "options_ui": {
 	"browser_actions": {
 		"default_popup": "options.html"
 	  },	
