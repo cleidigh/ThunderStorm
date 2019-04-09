@@ -28,6 +28,7 @@
   <!-- still use the preference attribute with an identifier that matches the preference system. -->
 
   <prefpane>
+    <vbox>
     <hbox flex="0">
       <image src="chrome://preferences1/skin/preferences1-64px.png" width="64px" height="64px" />
     </hbox>
@@ -47,6 +48,7 @@
       <label accesskey="&color.accesskey;" control="color">Transition Color (name):</label>
       <textbox id="color" preference="extensions.preferences1.optionscolor" />
     </html:fieldset>
+  </vbox>
   </prefpane>
 
   <!-- The overlay loader utilizing the preferences helper script seems to want to be at the bottom -->

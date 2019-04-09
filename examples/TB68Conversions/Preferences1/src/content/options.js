@@ -79,8 +79,8 @@ function onDialogAccept(e) {
 // Color validation function
 function isColor(strColor) {
 	var s = new Option().style;
-	s.color = strColor;
-	return s.color == strColor;
+	s.color = strColor.toLowerCase();
+	return s.color == strColor.toLowerCase();
 }
 
 // Standard load function - Preferences.addAll() does NOT like to be here
