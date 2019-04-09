@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 
-<!-- New CSS for TB 60.* -->
+<!-- New CSS for TB 60+ -->
 <?xml-stylesheet href="chrome://messenger/skin/preferences/preferences.css" type="text/css"?>
 
 <!-- Load dialog CSS - just because we can -->
@@ -13,26 +13,38 @@
 
 <!-- <prefwindow> needs to be replaced by a dialog window, <dialog>. -->
 <!-- The dialog window element already exists, but some behaviors and attributes have changed -->
+<!-- The on [event] functions and attributes are now handled with standard Windows listeners -->
+<!-- Using type="child" forces the dialog into non-instantApply so we can validate -->
 
-<!-- - The on [event] functions and attributes are now handled with standard Windows listeners -->
-<!-- - Use the following listener paradigms, typically set up in the corresponding JavaScript file -->
+<dialog class="options-dialog" 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml" 
+  id="preferences1dialog"
+  title="&prefwindow.title;" 
+  type="child"> 
 
-<!-- to do more notes here -->
+   <!-- The preferencesBindings helper script gets the preferences in the attached JavaScript options.js -->
+  <!-- There is no longer a <preferences> section with <preference> elements.  Elements that utilize a preference -->
+  <!-- still use the preference attribute with an identifier that matches the preference system. -->
 
-<dialog class="options-dialog" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-  xmlns:html="http://www.w3.org/1999/xhtml" id="preferences1dialog" title="&prefwindow.title;" type="child">
-
-
-  <prefpane id="pane1" label="&pane1.title;">
+  <prefpane>
+    <hbox flex="0">
+      <image src="chrome://preferences1/skin/preferences1-64px.png" width="64px" height="64px" />
+    </hbox>
+    <hbox flex="1"></hbox>
+    <!-- Use HTML element fieldset and legend to replace groupbox/caption -->
     <html:fieldset>
       <html:legend>Animation</html:legend>
-      <checkbox label="Animation Enable" preference="extensions.preferences1.animationenabled" />
-      <label control="duration">Duration:</label>
-      <textbox id="duration" preference="extensions.preferences1.animationduration" />
+      <!-- The 'preference' attribute name matches the IDs in the legacy preference system -->
+      <hbox>
+        <checkbox label="Animation Enable" preference="extensions.preferences1.animationenabled" />
+        <label control="duration">Duration (s):</label>
+        <textbox id="duration" preference="extensions.preferences1.animationduration" />
+      </hbox>
     </html:fieldset>
     <html:fieldset>
       <html:legend>Colors</html:legend>
-      <label accesskey="&color.accesskey;" control="color">Background Color:</label>
+      <label accesskey="&color.accesskey;" control="color">Transition Color (name):</label>
       <textbox id="color" preference="extensions.preferences1.optionscolor" />
     </html:fieldset>
   </prefpane>
