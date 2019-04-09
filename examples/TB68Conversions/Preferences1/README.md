@@ -2,7 +2,7 @@
 
 ## Introduction & Overview
 
-...to do
+...to doIf
 
 ## Preferences 1 Example
 
@@ -25,7 +25,15 @@ The following Thunderbird Add-ons are other examples to look at using the new sy
 - [Shrunked Image Resizer: Geoff Lankow][shrunked]
 - [Message Archive Options (WIP): Andrew Williams, Christopher Leidigh][MAO]
 
+## preferencesBindings.js Helper Script Reference
 
+Preferences Methods:
+- add() : Add individual managed preference object for the XUL
+- addAll() : Add all managed preference object for the XUL in an array
+- get() : Get individual preference object (not the value)
+- getAll() : Get all preference objects in an array
+- 
+- 
 ## Credits
 
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
