@@ -2,7 +2,24 @@
 
 ## Introduction & Overview
 
-...to doIf
+The current "Legacy" Preferences System documented [here][MozillaPreferences], hereafter
+"LPS" has several key changes in Thunderbird 68.  While the basic management features
+remain, the handling of preferences within XUL documents is done differently.
+The fundamental changes are:
+- <prefwindow>, <preferences>, <preference>, <prefpane> elements are deprecated
+- A modified <dialog> window is used instead of <prefwindow>
+- Preference elements are no longer described in the XUL document, but in a script
+- The preferencesBindings.js helper script has methods for managing the document preferences 
+- `preference` attributes remain to bind the system preferences to the document elements
+
+Note: 
+
+While the preferencesBindings.js exists in Thunderbird 60, the current example
+Preferences1, does not currently work in TB60.  However... it may be possible
+to have Preferences management working with the new preferencesBindings for both
+TB60 and TB68, I am investigating that.  Even if that proves to be impossible,
+one can work with both in the same add-on changing logic depending upon the version.
+
 
 ## Preferences 1 Example
 
@@ -23,7 +40,7 @@ who will be included soon.
 The following Thunderbird Add-ons are other examples to look at using the new system:
 
 - [Shrunked Image Resizer: Geoff Lankow][shrunked]
-- [Message Archive Options (WIP): Andrew Williams, Christopher Leidigh][MAO]
+- [Message Archive Options (WIP - See tb68-update branch): Andrew Williams, Christopher Leidigh][MAO]
 
 ## preferencesBindings.js Helper Script Reference
 
@@ -32,12 +49,17 @@ Preferences Methods:
 - addAll() : Add all managed preference object for the XUL in an array
 - get() : Get individual preference object (not the value)
 - getAll() : Get all preference objects in an array
-- 
-- 
+- type() : Get document type 
+- observe() : Preference observer
+- forceUnableInstantApply() : Force instantApply = true
+
+
+
 ## Credits
 
 Folder diagram CSS: https://codepen.io/patrickhlauke/pen/azbYWZ
 
+[MozillaPreferences]:https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Code_snippets/Preferences
 [MAO]:https://github.com/cleidigh/Message-archive-options-TB
 [shrunked]:https://github.com/darktrojan/shrunked
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
