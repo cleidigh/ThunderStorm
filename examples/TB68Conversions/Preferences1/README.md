@@ -6,8 +6,8 @@ The current "Legacy" Preferences System documented [here][MozillaPreferences], h
 "LPS" has several key changes in Thunderbird 68.  While the basic management features
 remain, the handling of preferences within XUL documents is done differently.
 The fundamental changes are:
-- <prefwindow>, <preferences>, <preference>, <prefpane> elements are deprecated
-- A modified <dialog> window is used instead of <prefwindow>
+- `<prefwindow>, <preferences>, <preference>, <prefpane>` elements are deprecated
+- A modified `<dialog>` window is used instead of `<prefwindow>`
 - Preference elements are no longer described in the XUL document, but in a script
 - The preferencesBindings.js helper script has methods for managing the document preferences 
 - `preference` attributes remain to bind the system preferences to the document elements
