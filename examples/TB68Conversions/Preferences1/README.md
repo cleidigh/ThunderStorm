@@ -12,13 +12,14 @@ The fundamental changes are:
 - The preferencesBindings.js helper script has methods for managing the document preferences 
 - `preference` attributes remain to bind the system preferences to the document elements
 
-Note: 
+Note: Targeting Both Thunderbird 60/68
 
 While the preferencesBindings.js exists in Thunderbird 60, the current example
-Preferences1, does not currently work in TB60.  However... it may be possible
+Preferences1, does not currently work in TB60.  However... it looks like it is possible
 to have Preferences management working with the new preferencesBindings for both
-TB60 and TB68, I am investigating that.  Even if that proves to be impossible,
-one can work with both in the same add-on changing logic depending upon the version.
+TB60 and TB68, I am investigating possible solutions.  I have an experiment partially working.
+Even if that proves to be impossible, one can work with both in the same add-on changing logic 
+depending upon the version.
 
 
 ## Preferences 1 Example
