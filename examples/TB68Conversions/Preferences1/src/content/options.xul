@@ -27,6 +27,10 @@
   <!-- There is no longer a <preferences> section with <preference> elements.  Elements that utilize a preference -->
   <!-- still use the preference attribute with an identifier that matches the preference system. -->
 
+  <data-preference id="extensions.preferences1.optionscolor" type="unichar" />
+  <data-preference id="extensions.preferences1.animationduration" type="int" />
+  <data-preference id="extensions.preferences1.animationenabled" type="bool" />
+
   <prefpane>
     <vbox>
     <hbox flex="0">

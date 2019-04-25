@@ -12,15 +12,19 @@ var { Services } = ChromeUtils.import('resource://gre/modules/Services.jsm');
 
 // Add all relevant preferences into page with Preferences.addAll()
 // Note: Both are current and default preferences are loaded for each object
-// Loading the preferences here makes them available to the onLoad() event handler
+// It should be possible to load the preferences here or within the onLoad() event handler
 
-Services.console.logStringMessage("Preferences 1: Loading options.xul preferences");
+Services.console.logStringMessage("Preferences 1: Loading options.xul preferences P5");
 
-Preferences.addAll([
-	{ id: "extensions.preferences1.optionscolor", type: "unichar" },
-	{ id: "extensions.preferences1.animationduration", type: "int" },
-	{ id: "extensions.preferences1.animationenabled", type: "bool" },
-]);
+let preferenceElements = document.querySelectorAll("data-preference");
+let preferences = [];
+for (let index = 0; index < preferenceElements.length; index++) {
+	const element = preferenceElements[index];
+	const elementType = element.getAttribute('type');
+	preferences.push({id: element.id, type: elementType })
+	Services.console.logStringMessage("Preferences 1: preference: "+ element.id + ' '+ elementType);
+}
+Services.console.logStringMessage("Preferences 1: scanned array: Done");
 
 // Our onDialogAccept sub-handler
 function onDialogAccept(e) {
@@ -87,8 +91,17 @@ function isColor(strColor) {
 // they are already loaded at this point into the DOM
 
 function onLoad(e) {
-	Services.console.logStringMessage("Preferences 1: onload event function");
+	Services.console.logStringMessage("Preferences 1: onload event function - load preferences array");
 
+	Preferences.addAll(preferences);
+
+/* 	
+Preferences.addAll([
+	{ id: "extensions.preferences1.optionscolor", type: "unichar" },
+	{ id: "extensions.preferences1.animationduration", type: "int" },
+	{ id: "extensions.preferences1.animationenabled", type: "bool" },
+]);
+ */
 	// Grab the dialog element so we can play with it
 	const dialog = document.getElementById("preferences1dialog");
 
