@@ -15,13 +15,15 @@ var { Services } = ChromeUtils.import('resource://gre/modules/Services.jsm');
 // Loading the preferences here makes them available to the onLoad() event handler
 
 Services.console.logStringMessage("Preferences 1: Loading options.xul preferences");
-
+/* 
 Preferences.addAll([
 	{ id: "extensions.preferences1.optionscolor", type: "unichar" },
 	{ id: "extensions.preferences1.animationduration", type: "int" },
 	{ id: "extensions.preferences1.animationenabled", type: "bool" },
 ]);
 
+Services.console.logStringMessage("Preferences 1: Loading options.xul preferences - Done1");
+ */
 // Our onDialogAccept sub-handler
 function onDialogAccept(e) {
 	// Notice we are passing around the event object 'e'.  We need this to perform
@@ -86,11 +88,31 @@ function isColor(strColor) {
 // Standard load function - Preferences.addAll() does NOT like to be here
 // they are already loaded at this point into the DOM
 
+// let context = {};
+// context.window = window;
+// let context = null;
+
+
 function onLoad(e) {
 	Services.console.logStringMessage("Preferences 1: onload event function");
 
+	let context = {};
+	// context.window = window;
+
 	// Grab the dialog element so we can play with it
 	const dialog = document.getElementById("preferences1dialog");
+
+	Services.scriptloader.loadSubScript("chrome://global/content/preferencesBindings.js", context, "UTF-8" /* The script's encoding */);
+	Services.console.logStringMessage("Preferences 1: onload loaded preferences script");
+
+	Preferences.addAll([
+		{ id: "extensions.preferences1.optionscolor", type: "unichar" },
+		{ id: "extensions.preferences1.animationduration", type: "int" },
+		{ id: "extensions.preferences1.animationenabled", type: "bool" },
+	]);
+	
+	Preferences.updateAllElements();
+	Services.console.logStringMessage("Preferences 1: onload loaded preferences ");
 
 	// Get current preferences (attached to DOM by Preferences.addAll() inline)
 	// Note:  When one uses Preferences.get() these are not directly the preference attributes

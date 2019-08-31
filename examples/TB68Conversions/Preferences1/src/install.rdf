@@ -2,9 +2,9 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>preferences1@tb-ao-dev.net</em:id>
-    <em:name>Preferences1 - TB68 Options</em:name>
+    <em:name>Preferences1 - TB68 Options Ext1</em:name>
     <em:type>2</em:type>
-    <em:version>1.0.0</em:version>
+    <em:version>1.0.1b1</em:version>
     <em:creator>Christopher Leidigh</em:creator>
     <em:description>Demonstrates new Preferences System Changes</em:description>
     <em:homepageURL>https://github.com/cleidigh/Thunderstorm.git</em:homepageURL>
