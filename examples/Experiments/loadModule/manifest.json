@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "applications": {
+    "gecko": {
+      "id": "loadModule@thunderStormExamples",
+      "strict_min_version": "78.0",
+      "strict_max_version": "78.*"
+    }
+  },
+  "name": "loadModule@thunderStormExamples",
+  "version": "1.0",
+  "author": "John Bieling",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "experiment_apis": {
+    "ExampleAPI": {
+      "schema": "content/api/ExampleAPI/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["ExampleAPI"]],
+        "script": "content/api/ExampleAPI/implementation.js"
+      }
+    }
+  }
+}

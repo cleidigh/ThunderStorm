@@ -1,0 +1,39 @@
+[
+  {
+    "namespace": "ExampleAPI",
+    "functions": [
+      {
+        "name": "registerChromeUrl",
+        "type": "function",
+        "description": "Register folders which should be available as chrome:// urls (as defined in the legacy chrome.manifest)",
+        "async": false,
+        "parameters": [
+          {
+            "name": "chromeData",
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items" : {
+                "type": "string"
+              }
+            },
+            "description": "Array of ChromeData Arrays."
+          }
+        ]
+      },
+      {
+        "name": "doSomethingWithJSM",
+        "type": "function",
+        "description": "Async function that loads a given JSM and does something with it. Upon Add-On shutdown, the JSM will be unloaded.",
+        "async": true,
+        "parameters": [
+          {
+            "name": "aPath",
+            "type": "string",
+            "description": "Either the chrome:// path to the JSM or its relative location from the root of the extension."
+          }
+        ]
+      }      
+    ]
+  }
+]
