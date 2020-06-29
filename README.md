@@ -11,7 +11,7 @@ Thunderbird relies and is based on Mozilla's Gecko core framework. Focus will be
 the differences and transition issues. The new structure adapted to Thunderbird is
 termed *MailExtension*.
 
-To get started with MailExtensions, we suggest to checkout these resources first:
+To get started with MailExtensions, we suggest to check out these resources first:
 * [Comparison between XUL/XPCOM Extensions and WebExtensions](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
 * [Thunderbird Add-On Developer Guide](https://developer.thunderbird.net/add-ons/about-add-ons)
 * [MailExtension API Documentation](https://thunderbird-webextensions.readthedocs.io/en/latest/)
