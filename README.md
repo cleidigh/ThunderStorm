@@ -23,10 +23,10 @@ pointers to other tutorials or related documentation is also included.
 
 ## Organization
 
-- Development Environment & Tools: Help getting started
 - Examples:
-  - [TB60 to TB68 Conversion Examples][TB68Conversion]
   - [TB78 Hello Worlds - Several basic starting points][HelloWorlds]
+  - [TB78 Experimental APIs - How to get things done beyond standard MailExtension APIs][Experiments]
+  - [TB60 to TB68 Conversion Examples][TB68Conversion]
   - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
 
 
@@ -36,8 +36,7 @@ pointers to other tutorials or related documentation is also included.
 ## Credits
 <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
-[Scaffolding]:/examples/scaffolds/README.md
 [HelloWorlds]:/examples/HelloWorlds/README.md
+[Experiments]:/examples/Experiments/README.md
 [TB68Conversion]:/examples/TB68Conversions/README.md
-[ContributionPoints]:/examples/ContributionPoints/README.md
-[AdvancedExamples]:/examples/contribution-points/README.md
+[Scaffolding]:/examples/scaffolds/README.md
