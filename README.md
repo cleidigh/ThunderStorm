@@ -24,7 +24,7 @@ pointers to other tutorials or related documentation is also included.
 ## Organization
 
 - Examples:
-  - [TB78 Hello Worlds - Several basic starting points][HelloWorlds]
+  - [TB78 Hello Worlds - Basic starting points][HelloWorlds]
   - [TB78 Experimental APIs - How to get things done beyond standard MailExtension APIs][Experiments]
   - [TB60 to TB68 Conversion Examples][TB68Conversion]
   - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]

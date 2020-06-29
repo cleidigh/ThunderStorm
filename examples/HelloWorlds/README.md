@@ -1,11 +1,9 @@
 # ![Thunderstorm icon] Hello World MailExtensions Examples
 
 ## Table of Contents
-
 | Example         | Description |
 | --------------- | ----------- |
 | [HelloWorld-MailExt-Popup][HelloWorld-Popup]      |  Single popup page/js  |
-
 
 
 ## Credits
