@@ -25,12 +25,9 @@ pointers to other tutorials or related documentation is also included.
 
 - Development Environment & Tools: Help getting started
 - Examples:
+  - [TB60 to TB68 Conversion Examples][TB68Conversion]
+  - [TB78 Hello Worlds - Several basic starting points][HelloWorlds]
   - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
-  - [Hello Worlds - Several basic starting points][HelloWorlds]
-  - [TB68 Conversion Examples][TB68Conversion]
-  - [Basic component & contribution point example comparisons - small, specific granular issues][ContributionPoints]
-  - [Advanced Component and API comparisons - Advanced topic issues][AdvancedExamples]
-  - [Tag by tag XUL => HTML conversion]
 
 
 
