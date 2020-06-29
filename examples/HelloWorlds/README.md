@@ -1,21 +1,14 @@
 # ![Thunderstorm icon] Hello World MailExtensions Examples
 
-## HelloWorld Examples
-- [HelloWorld-MailExt-Popup  -  Single popup page/js][HelloWorld-Popup]
-- [HelloWorld-MailExt-Background  -  Single background.js][HelloWorld-Background]
-- [HelloWorld-MailExt-Options  -  Single options_ui page/js][HelloWorld-Options]
-- [HelloWorld-MailExt-Menu  -  Tool Menu Contribution page/js][HelloWorld-ToolMenu]
-- [HelloWorld-MailExt-Maritage  -  Interactive combination][HelloWorld-Maritage]
-  
-## Notes:
+## Table of Contents
+| Example         | Description |
+| --------------- | ----------- |
+| [HelloWorld-MailExt-Popup][HelloWorld-Popup]      |  Single popup page/js  |
 
 
 ## Credits
-
+<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
-[HelloWorld-Popup]:/examples/HelloWorlds/HelloWorld-MailExt-Popup/README.md
-[HelloWorld-Background]:/examples/HelloWorlds/HelloWorld-MailExt-Background/README.md
-[HelloWorld-Options]:/examples/HelloWorlds/HelloWorld-MailExt-Options/README.md
-[HelloWorld-ToolMenu]:/examples/HelloWorlds/HelloWorld-MailExt-ToolsMenu/README.md
+[HelloWorld-Popup]:/examples/HelloWorlds/HelloWorld-MailExt-Popup
   
