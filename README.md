@@ -2,18 +2,22 @@
 
 ## Tips, Tricks &amp; Examples for Thunderbird E-mail New Add-On Development
 
-The goal of this repository is to provide up-to-date information and examples
-in order to better "weather" the transition to Thunderbird's new extension structure.
-The new paradigm follows the WebExtension standard followed by most browsers these days.
+The goal of this repository is to provide examples in order to better "weather"
+the transition to Thunderbird's new extension structure. The new paradigm follows
+the *WebExtension* standard followed by most browsers these days.
+
 Obviously Thunderbird has different requirements from a browser extension even if
 Thunderbird relies and is based on Mozilla's Gecko core framework. Focus will be on
-the differences and transition issues.  The new structure is termed "MailExtension" as this
-seems to be where it's going.
+the differences and transition issues. The new structure adapted to Thunderbird is
+termed *MailExtension*.
 
-TBD: terminology?
+To get started with MailExtensions, we suggest to checkout these resources first:
+* [Comparison between XUL/XPCOM Extensions and WebExtensions](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
+* [Thunderbird Add-On Developer Guide](https://developer.thunderbird.net/add-ons/about-add-ons)
+* [MailExtension API Documentation](https://thunderbird-webextensions.readthedocs.io/en/latest/)
 
 The approach I have taken is not so much a tutorial, but rather a set of references
-including working examples, gists, wiki entries and other transition information.
+including working examples and other transition information.
 Hopefully this approach will help both new and seasoned developers.  For both,
 pointers to other tutorials or related documentation is also included.
 
@@ -27,8 +31,6 @@ pointers to other tutorials or related documentation is also included.
   - [Basic component & contribution point example comparisons - small, specific granular issues][ContributionPoints]
   - [Advanced Component and API comparisons - Advanced topic issues][AdvancedExamples]
   - [Tag by tag XUL => HTML conversion]
-- Wiki:
-- Gists:
 
 
 
