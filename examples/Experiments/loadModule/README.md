@@ -1,4 +1,4 @@
-## Loading JSM in experiments
+## Loading JSMs in experiments
 
 As of TB78, add-ons can no longer register `chrome://*` URLs via the `chrome.manifest`file. However, inside experiments global URLs are still needed sometimes, for example when loading JSM modules. This example shows how to get around this by either using:
 
