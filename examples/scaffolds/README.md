@@ -1,6 +1,4 @@
-# ![Thunderstorm icon] Scaffolds
-
-## Example MailExtension File And Folder Structures
+# ![Thunderstorm icon] Scaffolds - Example MailExtension File And Folder Structures
 
 Each subdirectory within `./scaffolding` represents an example structure
 including stub files for informational and starting points uses. Where
