@@ -4,6 +4,7 @@
 | --------------- | ----------- |
 | [HelloWorld-Popup][HelloWorld-Popup]      |  Simple HelloWorld example, using a single popup page/js  |
 | [LoadModule][LoadModule]      | Advanced example using an experiment to load JSMs using `file://*` URLs or `chrome://` URLs.  |
+| [WindowListener][WindowListener]      | Advanced example using an experiment to register JavaScript files, which will be loaded into opened windows. These scripts can be used to inject/remove elements for open/closed windows. |
 
 
 ## Credits
@@ -12,3 +13,4 @@
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
 [HelloWorld-Popup]:/examples/MailExtensions/HelloWorld-Popup
 [LoadModule]:/examples/MailExtensions/LoadModule
+[WindowListener]:/examples/MailExtensions/WindowListener
