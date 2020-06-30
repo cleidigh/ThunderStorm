@@ -1,6 +1,5 @@
 ## ![Thunderstorm icon] MailExtension Examples - How to get things done
 
-## Table of Contents
 | API             | Description |
 | --------------- | ----------- |
 | [HelloWorld-Popup][HelloWorld-Popup]      |  Simple HelloWorld example, using a single popup page/js  |
