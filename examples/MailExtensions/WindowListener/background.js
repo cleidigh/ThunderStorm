@@ -38,5 +38,5 @@ messenger.WindowListener.registerShutdownScript("content/shutdown.js");
 /*
  * Start Listening for windows
  */
-messenger.WindowListener.startListening();
+messenger.WindowListener.startListening("ListenerExampleAddon");
 
