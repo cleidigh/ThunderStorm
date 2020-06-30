@@ -10,6 +10,7 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
     this.registeredWindows = {};
     this.pathToShutdownScript = null;
     this.chromeHandle = null;
+    this.openWindows = [];
     
     const aomStartup = Cc["@mozilla.org/addons/addon-manager-startup;1"].getService(Ci.amIAddonManagerStartup);
 
@@ -48,17 +49,18 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
         startListening() {
           let urls = Object.keys(that.registeredWindows);
           if (urls.length > 0) {
+            // Before registering the window listener, check which windows are already open
+            that.openWindows = [];
+            for (let window of Services.wm.getEnumerator(null)) {
+              that.openWindows.push(window.location.href);
+            }
+            
+            
             // Register window listener for all pre-registered windows
             ExtensionSupport.registerWindowListener("injectListener", {
               chromeURLs: Object.keys(that.registeredWindows),
               onLoadWindow(window) {
                 try {
-                  // Check, if that window already has an extension object in its addon-specific namespace
-                  let wasAlreadyOpen = (window 
-                    && window[that.extension.id] 
-                    && window[that.extension.id].extension
-                    && window[that.extension.id].extension.id) ? true : false;
-                  
                   // Create add-on specific namespace
                   window[that.extension.id] = {};
                   // Make extension object available in loaded JavaScript
@@ -66,12 +68,15 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
                   // Load script into add-on specific namespace
                   Services.scriptloader.loadSubScript(that.registeredWindows[window.location.href], window[that.extension.id], "UTF-8");
                   // Call onLoad(window, wasAlreadyOpen)
-                  window[that.extension.id].onLoad(window, wasAlreadyOpen);
+                  window[that.extension.id].onLoad(window, that.openWindows.includes(window.location.href));
                 } catch (e) {
                   Components.utils.reportError(e)
                 }
               },
               onUnloadWindow(window) {
+                //  Remove this window from the list of open windows
+                that.openWindows = that.openWindows.filter(e => (e != window.location.href));    
+                
                 try {
                   // Call onUnload()
                   window[that.extension.id].onUnload(window, false);
