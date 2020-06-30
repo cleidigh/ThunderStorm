@@ -36,17 +36,17 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
         startListening() {
           let urls = Object.keys(that.registeredWindows);
           if (urls.length > 0) {
-            // Before registering the window listener, check which windows are already open
-            let openWindows = [];
-            for (let window of Services.wm.getEnumerator(null)) {
-              openWindows.push(window.location.href);
-            }
-
             // Register window listener for all pre-registered windows
             ExtensionSupport.registerWindowListener("injectListener", {
               chromeURLs: Object.keys(that.registeredWindows),
-              async onLoadWindow(window) {
+              onLoadWindow(window) {
                 try {
+                  // Check, if that window already has an extension object in its addon-specific namespace
+                  let wasAlreadyOpen = (window 
+                    && window[that.extension.id] 
+                    && window[that.extension.id].extension
+                    && window[that.extension.id].extension.id) ? true : false;
+                  
                   // Create add-on specific namespace
                   window[that.extension.id] = {};
                   // Make extension object available in loaded JavaScript
@@ -54,16 +54,18 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
                   // Load script into add-on specific namespace
                   Services.scriptloader.loadSubScript(that.registeredWindows[window.location.href], window[that.extension.id], "UTF-8");
                   // Call onLoad(window, wasAlreadyOpen)
-                  await window[that.extension.id].onLoad(window, openWindows.includes(window.location.href));
+                  window[that.extension.id].onLoad(window, wasAlreadyOpen);
                 } catch (e) {
                   Components.utils.reportError(e)
                 }
               },
-              async onUnloadWindow(window) {
+              onUnloadWindow(window) {
                 // Call onUnload()
-                await window[that.extension.id].onUnload(window);               
-                // Clear script
-                window[that.extension.id] = {};
+                try {
+                  window[that.extension.id].onUnload(window, false);
+                } catch (e) {
+                  Components.utils.reportError(e)
+                }
               }
             });
           } else {
@@ -83,9 +85,11 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
       for (let window of Services.wm.getEnumerator(null)) {
         if (this.registeredWindows.hasOwnProperty(window.location.href)) {
           // Call onUnload()
-          window[this.extension.id].onUnload(window);               
-          // Clear script
-          window[this.extension.id] = {};          
+          try {
+            window[this.extension.id].onUnload(window, true);
+          } catch (e) {
+            Components.utils.reportError(e)
+          }
         }
       }
       // Stop listening for new windows.
