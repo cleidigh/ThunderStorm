@@ -24,7 +24,7 @@ pointers to other tutorials or related documentation is also included.
 ## Organization
 
 - Examples:
-  - [TB78 Examples - How to get things done][MailExtensions]
+  - [TB78 MailExtension Examples - How to get things done][MailExtensions]
   - [TB60 to TB68 Conversion Examples][TB68Conversion]
   - [Scaffolding: Bare metal folder & file structures - Copy and go!][Scaffolding]
 
