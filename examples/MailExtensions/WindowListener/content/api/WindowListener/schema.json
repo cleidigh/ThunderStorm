@@ -1,0 +1,39 @@
+[
+  {
+    "namespace": "WindowListener",
+    "functions": [
+      {
+        "name": "startListening",
+        "type": "function",
+        "parameters": []
+      },
+      {
+        "name": "registerWindow",
+        "type": "function",
+        "parameters": [
+          {
+            "name": "windowHref",
+            "type": "string",
+            "description": "windowHref"
+          },
+          {
+            "name": "jsFile",
+            "type": "string",
+            "description": "jsFile"
+          }
+        ]
+      },
+      {
+        "name": "registerShutdownScript",
+        "type": "function",
+        "parameters": [
+          {
+            "name": "aPath",
+            "type": "string",
+            "description": "aPath"
+          }
+        ]
+      }
+    ]
+  }
+]
