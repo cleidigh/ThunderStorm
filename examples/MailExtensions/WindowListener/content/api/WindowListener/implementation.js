@@ -9,12 +9,24 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
     
     this.registeredWindows = {};
     this.pathToShutdownScript = null;
+    this.chromeHandle = null;
     
+    const aomStartup = Cc["@mozilla.org/addons/addon-manager-startup;1"].getService(Ci.amIAddonManagerStartup);
+
     let that = this;
 
     return {
       WindowListener: {
         
+        registerChromeUrl(chromeData) {
+          const manifestURI = Services.io.newURI(
+            "manifest.json",
+            null,
+            context.extension.rootURI
+          );
+          that.chromeHandle = aomStartup.registerChrome(manifestURI, chromeData);          
+        },
+
         registerWindow(windowHref, jsFile) {
           if (!that.registeredWindows.hasOwnProperty(windowHref)) {
             // path to JS file can either be chrome:// URL or a relative URL
@@ -60,8 +72,8 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
                 }
               },
               onUnloadWindow(window) {
-                // Call onUnload()
                 try {
+                  // Call onUnload()
                   window[that.extension.id].onUnload(window, false);
                 } catch (e) {
                   Components.utils.reportError(e)
@@ -84,8 +96,8 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
     if (urls.length > 0) {          
       for (let window of Services.wm.getEnumerator(null)) {
         if (this.registeredWindows.hasOwnProperty(window.location.href)) {
-          // Call onUnload()
           try {
+            // Call onUnload()
             window[this.extension.id].onUnload(window, true);
           } catch (e) {
             Components.utils.reportError(e)
@@ -94,12 +106,11 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
       }
       // Stop listening for new windows.
       ExtensionSupport.unregisterWindowListener("injectListener");
-    } else {
-      console.log("Not Observing, no windows registered");
     }
     
-    // Execute registered shutdown script
+    // Load registered shutdown script
     let shutdownJS = {};
+    shutdownJS.extension = this.extension;
     try {
       if (this.pathToShutdownScript) Services.scriptloader.loadSubScript(this.pathToShutdownScript, shutdownJS, "UTF-8");
     } catch (e) {
@@ -109,5 +120,10 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
     // Flush all caches
     Services.obs.notifyObservers(null, "startupcache-invalidate");
     this.registeredWindows = {};
+    
+    if (this.chromeHandle) {
+      this.chromeHandle.destruct();
+      this.chromeHandle = null;
+    }    
   }
 };

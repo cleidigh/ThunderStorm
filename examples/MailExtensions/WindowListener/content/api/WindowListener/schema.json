@@ -3,6 +3,24 @@
     "namespace": "WindowListener",
     "functions": [
       {
+        "name": "registerChromeUrl",
+        "type": "function",
+        "description": "Register folders which should be available as chrome:// urls (as defined in the legacy chrome.manifest)",
+        "parameters": [
+          {
+            "name": "chromeData",
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items" : {
+                "type": "string"
+              }
+            },
+            "description": "Array of ChromeData Arrays."
+          }
+        ]
+      },
+      {
         "name": "startListening",
         "type": "function",
         "parameters": []
