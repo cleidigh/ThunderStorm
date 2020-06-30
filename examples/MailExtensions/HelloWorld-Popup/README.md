@@ -6,7 +6,7 @@ The structure below represents pretty much the bare minimum setup
 for a new mail extension.
 
 ```js
-	HelloWorld-MailExt-Popup/
+	HelloWorld-Popup/
 	├── manifest.json
 	├── popup.html
 	├── popup.css
@@ -19,13 +19,11 @@ for a new mail extension.
 
 ## Notes:
 
-- Rough parallel to the legacy-xul-ext-basic1
-- The root manifest.json replaces both install.rdf and chrome.manifest
+- The root manifest.json replaces both install.rdf and chrome.manifest known from legacy extensions
 - Uses popup.html as equivalent to legacy options.xul
 - Folder organization is currently not strictly defined except _locale
 - This example has one default locale, en_US
 - The 2 manifest keys are the only localized strings
-- See HelloWorld-MailExt-Localization for more examples
   
 
 ## Credits
