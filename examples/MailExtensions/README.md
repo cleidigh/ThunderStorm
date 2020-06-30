@@ -4,7 +4,7 @@
 | --------------- | ----------- |
 | [HelloWorld-Popup][HelloWorld-Popup]      |  Simple HelloWorld example, using a single popup page/js  |
 | [LoadModule][LoadModule]      | Advanced example using an experiment to load JSMs using `file://*` URLs or `chrome://` URLs.  |
-| [WindowListener][WindowListener]      | Advanced example using an experiment to register JavaScript files, which will be loaded into opened windows. These scripts can be used to inject/remove elements for open/closed windows. |
+| [WindowListener][WindowListener]      | Advanced example using an experiment to register JavaScript files, which will be loaded into opened windows. These scripts can be used to inject/remove elements for open/closed windows. This example also includes an example JSM module to show how to load and unload it. |
 
 
 ## Credits
