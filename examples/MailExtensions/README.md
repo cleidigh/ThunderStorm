@@ -4,7 +4,7 @@
 | --------------- | ----------- |
 | [HelloWorld-Popup][HelloWorld-Popup]      |  Simple HelloWorld example, using a single popup page/js  |
 | [LoadModule][LoadModule]      | Advanced example using an experiment to load JSMs using `file://*` URLs or `chrome://` URLs.  |
-| [WindowListener][WindowListener]      | Advanced example using an experiment to register JavaScript files, which will be loaded into opened windows. These scripts can be used to inject/remove elements for open/closed windows. This example also includes an example JSM module to show how to load and unload it. |
+| [WindowListener][WindowListener]      | This API is intended to help authors to add elements to different parts of the Thunderbird UI, which is not yet possible with built-in MailExtension APIs. The API itself does not need to be touched, it is fully configurable by entries in the background.js script and the actual action is done by user provided JavaScript files, which are registered for certain windows and must include *onLoad()* and *onUnload()* functions, which will be automatically called, when windows get opened/closed or the add-on shuts down. It also shows how to load JSMs and how to access the i18n locales from experiments. |
 
 
 ## Credits
