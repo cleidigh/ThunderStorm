@@ -8,10 +8,6 @@ var myModule = {
   
   getValue: function() {
     return this.value;
-  },
-  
-  logValue: function() {
-    console.log("Current Value: " + this.value);
   }
 };
 
