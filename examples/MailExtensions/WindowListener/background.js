@@ -1,7 +1,7 @@
 
 // Register JavaScript files, which should be loaded into opened windows. The API expects two functions to exist and will call
 // * onLoad(window, was AlreadyOpen) during window load
-// * onUnload(window) during window unload
+// * onUnload(window) during window unload and during add-on shutdown
 // The parameter wasAlreadyOpen indicates, if the window was already open, when the add-on has been installed/loaded.
 // The JavaScript file will be loaded into its own namespace/object
 messenger.WindowListener.registerWindow("chrome://messenger/content/messenger.xhtml", "content/test1.js");
