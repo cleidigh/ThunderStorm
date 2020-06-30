@@ -54,7 +54,7 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
             // Before registering the window listener, check which windows are already open
             that.openWindows = [];
             for (let window of Services.wm.getEnumerator(null)) {
-              that.openWindows.push(window.location.href);
+              that.openWindows.push(window);
             }
             
             
@@ -70,14 +70,14 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
                   // Load script into add-on specific namespace
                   Services.scriptloader.loadSubScript(that.registeredWindows[window.location.href], window[namespace], "UTF-8");
                   // Call onLoad(window, wasAlreadyOpen)
-                  window[namespace].onLoad(window, that.openWindows.includes(window.location.href));
+                  window[namespace].onLoad(window, that.openWindows.includes(window));
                 } catch (e) {
                   Components.utils.reportError(e)
                 }
               },
               onUnloadWindow(window) {
                 //  Remove this window from the list of open windows
-                that.openWindows = that.openWindows.filter(e => (e != window.location.href));    
+                that.openWindows = that.openWindows.filter(e => (e != window));    
                 
                 try {
                   // Call onUnload()
