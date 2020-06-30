@@ -14,8 +14,7 @@
  * chrome://* URL and use that. The registerWindow() and registerShutdownScript()
  * functions used below can also be used with chrome://* URLs.
  */
-//messenger.WindowListener.registerChromeUrl(
-//	[ ["content", "addon_name", "content/"] ]);
+//messenger.WindowListener.registerChromeUrl([ ["content", "addon_name", "content/"] ]);
 
 /* 
  * Register JavaScript files, which should be loaded into opened windows. The API
@@ -31,10 +30,8 @@
  * - isAddOnShutDown : indicates, if onUnload() has been called due to manual 
  *   window closing or add-on shutdown
  */
-messenger.WindowListener.registerWindow(
-	"chrome://messenger/content/messenger.xhtml", "content/messenger.js");
-messenger.WindowListener.registerWindow(
-	"chrome://messenger/content/addressbook/addressbook.xhtml", "content/addressbook.js");
+messenger.WindowListener.registerWindow("chrome://messenger/content/messenger.xhtml", "content/messenger.js");
+messenger.WindowListener.registerWindow("chrome://messenger/content/addressbook/addressbook.xhtml", "content/addressbook.js");
 
 /* 
  * Any JSM which has been loaded by any of the registered JavaScript file, needs
