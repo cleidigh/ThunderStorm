@@ -11,4 +11,4 @@
 
 [Thunderstorm icon]:/rep-resources/images/thunderstorm.png
 [HelloWorld-Popup]:/examples/MailExtensions/HelloWorld-Popup
-[LoadModule]:/examples/MailExtensions/loadModule
+[LoadModule]:/examples/MailExtensions/LoadModule
