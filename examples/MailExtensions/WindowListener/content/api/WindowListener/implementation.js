@@ -53,7 +53,7 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
                   window[that.extension.id].extension = that.extension;
                   // Load script into add-on specific namespace
                   Services.scriptloader.loadSubScript(that.registeredWindows[window.location.href], window[that.extension.id], "UTF-8");
-                  // Call onLoad(window, isAlreadyOpen)
+                  // Call onLoad(window, wasAlreadyOpen)
                   await window[that.extension.id].onLoad(window, openWindows.includes(window.location.href));
                 } catch (e) {
                   Components.utils.reportError(e)
