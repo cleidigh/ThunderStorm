@@ -16,13 +16,14 @@ function onLoad(window, wasAlreadyOpen) {
 
 	// Parse a XUL fragment
 	// The oncommand attribute does not know "this", so we need to specify
-	// the entiry hierachy, including "ListenerExampleAddon" namespace of this JS
-	// as defined in background.js.
+	// the entiry hierachy, including "ListenerExampleAddon" namespace of this
+	// JavaScript files as defined in messenger.WindowListener.startListening()
+	// in background.js.
 	let xul = window.MozXULElement.parseXULToFragment(`
 <menuitem id="myMenuEntry"
-	class="menuitem-iconic"
-	oncommand="window.ListenerExampleAddon.restart(window)"
-	label="${label}"/>
+  class="menuitem-iconic"
+  oncommand="window.ListenerExampleAddon.restart(window)"
+  label="${label}"/>
 `);
 	
 	// Add the parsed fragment to the UI.
