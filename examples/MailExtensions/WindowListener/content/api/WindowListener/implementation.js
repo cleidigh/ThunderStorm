@@ -67,6 +67,10 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
                   window[namespace] = {};
                   // Make extension object available in loaded JavaScript
                   window[namespace].extension = that.extension;
+                  // Add messenger obj
+                  window[namespace].messenger = Array.from(that.extension.views).find(
+                    view => view.viewType === "background").xulBrowser.contentWindow
+                    .wrappedJSObject.browser;                  
                   // Load script into add-on specific namespace
                   Services.scriptloader.loadSubScript(that.registeredWindows[window.location.href], window[namespace], "UTF-8");
                   // Call onLoad(window, wasAlreadyOpen)
