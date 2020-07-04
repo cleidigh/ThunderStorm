@@ -5,14 +5,19 @@ var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
 
 var WindowListener = class extends ExtensionCommon.ExtensionAPI {
   getAPI(context) {
-    context.callOnClose(this);
-    
+
+    // track if this is the background/main context
+    this.isBackgroundContext = (context.viewType == "background");
+    if (this.isBackgroundContext) {
+      context.callOnClose(this);      
+    }
+
     this.registeredWindows = {};
     this.pathToShutdownScript = null;
     this.chromeHandle = null;
     this.openWindows = [];
     this.namespace = "";
-    
+
     const aomStartup = Cc["@mozilla.org/addons/addon-manager-startup;1"].getService(Ci.amIAddonManagerStartup);
 
     let self = this;
@@ -21,6 +26,9 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
       WindowListener: {
         
         registerChromeUrl(chromeData) {
+          if (!self.isBackgroundContext) 
+            throw new Error("The WindowListener API may only be called from the background page.");
+
           const manifestURI = Services.io.newURI(
             "manifest.json",
             null,
@@ -30,6 +38,9 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
         },
 
         registerWindow(windowHref, jsFile) {
+          if (!self.isBackgroundContext) 
+            throw new Error("The WindowListener API may only be called from the background page.");
+
           if (!self.registeredWindows.hasOwnProperty(windowHref)) {
             // path to JS file can either be chrome:// URL or a relative URL
             let path = jsFile.startsWith("chrome://") 
@@ -42,12 +53,18 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
         },
 
         registerShutdownScript(aPath) {
+          if (!self.isBackgroundContext) 
+            throw new Error("The WindowListener API may only be called from the background page.");
+
           self.pathToShutdownScript = aPath.startsWith("chrome://") 
             ? aPath
             : context.extension.rootURI.resolve(aPath);
         },
         
         startListening(namespace) {
+          if (!self.isBackgroundContext) 
+            throw new Error("The WindowListener API may only be called from the background page.");
+
           self.namespace = namespace;
           let urls = Object.keys(self.registeredWindows);
           if (urls.length > 0) {
@@ -101,7 +118,8 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
   }
 
   close() {
-    
+    console.log("WindowListener API is shutting down");
+  
     // Unload from all still open windows
     let urls = Object.keys(this.registeredWindows);
     if (urls.length > 0) {          
