@@ -16,6 +16,9 @@ var ExampleAPI = class extends ExtensionCommon.ExtensionAPI {
     this.chromeHandle = null;
     this.JSM = null;
     
+    // track if this is the background/main context
+    this.isBackgroundContext = (context.viewType == "background");
+    
     let that = this;
     
     return {
@@ -66,16 +69,20 @@ var ExampleAPI = class extends ExtensionCommon.ExtensionAPI {
     // load it afresh next time `import` is called. (If you don't call `unload`, Thunderbird will
     // remember this version of the module and continue to use it, even if your extension receives
     // an update.) You should *always* unload JSMs provided by your extension.
-    Cu.unload(this.pathToJSM);
-    
-    // after unloading also flush all caches
-    Services.obs.notifyObservers(null, "startupcache-invalidate");
+    if (this.isBackgroundContext) {
+      // If this API is used in different contexts (e.g. different windows) close() will get called if any
+      // of these context gets closed, but we want to unload the JSM only during add-on shutdown.
+      Cu.unload(this.pathToJSM);
+      
+      // after unloading also flush all caches
+      Services.obs.notifyObservers(null, "startupcache-invalidate");
 
-    if (this.chromeHandle) {
-      this.chromeHandle.destruct();
-      this.chromeHandle = null;
+      if (this.chromeHandle) {
+        this.chromeHandle.destruct();
+        this.chromeHandle = null;
+      }
     }
-
+    
     console.log("ExampleAPI unloaded!");
   }  
 };
