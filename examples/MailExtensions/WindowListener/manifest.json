@@ -16,7 +16,7 @@
   },
   "experiment_apis": {
     "WindowListener": {
-      "schema": "content/api/WindowListener/schema.json",
+      "schema": "api/WindowListener/schema.json",
       "parent": {
         "scopes": [
           "addon_parent"
@@ -26,7 +26,7 @@
             "WindowListener"
           ]
         ],
-        "script": "content/api/WindowListener/implementation.js"
+        "script": "api/WindowListener/implementation.js"
       }
     }
   }
